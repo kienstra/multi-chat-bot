@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/clojure:1.11.1
+    steps:
+      - checkout
+      - run: clojure -T:build ci
+
+workflows:
+  test-lint:
+    jobs:
+      - build
