@@ -4,7 +4,7 @@
 
 (def lib 'net.clojars.kienstra/multi-chat-bot)
 (def version "0.1.0-SNAPSHOT")
-(def main 'multi-chat-bot)
+(def main 'multi-chat-bot.core)
 (def class-dir "target/classes")
 
 (defn test "Run all the tests." [opts]
