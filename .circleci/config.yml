@@ -9,6 +9,6 @@ jobs:
       - run: clojure -T:build ci
 
 workflows:
-  test-lint:
+  build:
     jobs:
       - build
