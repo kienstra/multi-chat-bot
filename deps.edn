@@ -1,8 +1,8 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
  :aliases
- {:run-m {:main-opts ["-m" "kienstra.multi-chat-bot"]}
-  :run-x {:ns-default kienstra.multi-chat-bot
+ {:run-m {:main-opts ["-m" "multi-chat-bot"]}
+  :run-x {:ns-default multi-chat-bot
           :exec-fn greet
           :exec-args {:name "Clojure"}}
   :build {:deps {io.github.clojure/tools.build

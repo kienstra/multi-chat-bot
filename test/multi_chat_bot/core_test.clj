@@ -1,6 +1,6 @@
-(ns kienstra.multi-chat-bot-test
+(ns multi-chat-bot.core-test
   (:require [clojure.test :refer :all]
-            [kienstra.multi-chat-bot :refer :all]))
+            [multi-chat-bot.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
