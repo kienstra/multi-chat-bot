@@ -1,7 +1,11 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :deps {org.clojure/clojure     {:mvn/version "1.11.1"}
+        org.clojure/data.json   {:mvn/version "2.5.0"}
+        compojure/compojure     {:mvn/version "1.7.1"}
+        ring/ring-core          {:mvn/version "1.11.0"}
+        ring/ring-jetty-adapter {:mvn/version "1.11.0"}}
  :aliases
- {:run-m {:main-opts ["-m" "multi-chat-bot"]}
+ {:run-m {:main-opts ["-m" "multi-chat-bot.core"]}
   :run-x {:ns-default multi-chat-bot
           :exec-fn greet
           :exec-args {:name "Clojure"}}
