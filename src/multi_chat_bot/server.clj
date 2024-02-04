@@ -10,7 +10,7 @@
 (defn body-json [request] (json/read-str (slurp (:body request))))
 
 (defmulti command (fn [body]
-                   (get-in body ["data" "name"])))
+                    (get-in body ["data" "name"])))
 
 (defmethod command "quote" [_]
   (quote/command (make-http-gateway)))

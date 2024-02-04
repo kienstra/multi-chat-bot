@@ -16,6 +16,8 @@
              :extra-deps {jonase/eastwood {:mvn/version "1.4.2"}}}
   :clj-kondo {:replace-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
               :main-opts ["-m" "clj-kondo.main"]}
+  :cljfmt-check {:extra-deps {io.github.weavejester/cljfmt {:git/sha "3418b7f4c82c2a5acebc3c41e50138ea80d17010" :deps/root "cljfmt"}}
+                 :main-opts ["-m" "cljfmt.main"]}
   :test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
                       io.github.cognitect-labs/test-runner

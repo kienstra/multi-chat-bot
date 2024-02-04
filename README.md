@@ -22,6 +22,11 @@ Lint the project
 
     clojure -M:test:eastwood
     clojure -M:clj-kondo --lint src test
+    clojure -M:cljfmt check
+
+Fix formatting
+
+    clojure -M:cljfmt check
 
 Run the project, overriding the name to be greeted:
 
