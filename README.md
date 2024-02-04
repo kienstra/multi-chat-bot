@@ -10,10 +10,6 @@ Run the project directly, via `:exec-fn`:
 
     clojure -X:run-x
 
-Run the project, overriding the name to be greeted:
-
-    clojure -X:run-x :name '"Someone"'
-
 Run the project directly, via `:main-opts` (`-m multi-chat-bot`):
 
     clojure -M:run-m
@@ -28,15 +24,11 @@ Fix formatting
 
     clojure -M:cljfmt check
 
-Run the project, overriding the name to be greeted:
-
-    clojure -M:run-m Via-Main
-
 Run the project's tests
 
     clojure -T:build test
 
-Run the project's CI pipeline and build an uberjar (this will fail until you edit the tests to pass):
+Run the project's CI pipeline and build an uberjar:
 
     clojure -T:build ci
 
