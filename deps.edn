@@ -1,13 +1,23 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :deps {org.clojure/clojure     {:mvn/version "1.11.1"}
+        org.clojure/data.json   {:mvn/version "2.5.0"}
+        compojure/compojure     {:mvn/version "1.7.1"}
+        ring/ring-core          {:mvn/version "1.11.0"}
+        ring/ring-jetty-adapter {:mvn/version "1.11.0"}}
  :aliases
- {:run-m {:main-opts ["-m" "multi-chat-bot"]}
+ {:run-m {:main-opts ["-m" "multi-chat-bot.core"]}
   :run-x {:ns-default multi-chat-bot
           :exec-fn greet
           :exec-args {:name "Clojure"}}
   :build {:deps {io.github.clojure/tools.build
                  {:mvn/version "0.9.6"}}
           :ns-default build}
+  :eastwood {:main-opts ["-m" "eastwood.lint"]
+             :extra-deps {jonase/eastwood {:mvn/version "1.4.2"}}}
+  :clj-kondo {:replace-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
+              :main-opts ["-m" "clj-kondo.main"]}
+  :cljfmt {:extra-deps {io.github.weavejester/cljfmt {:git/sha "3418b7f4c82c2a5acebc3c41e50138ea80d17010" :deps/root "cljfmt"}}
+                 :main-opts ["-m" "cljfmt.main"]}
   :test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
                       io.github.cognitect-labs/test-runner
