@@ -18,6 +18,11 @@ Run the project directly, via `:main-opts` (`-m multi-chat-bot`):
 
     clojure -M:run-m
 
+Lint the project
+
+    clojure -M:test:eastwood
+    clojure -M:clj-kondo --lint src test
+
 Run the project, overriding the name to be greeted:
 
     clojure -M:run-m Via-Main
